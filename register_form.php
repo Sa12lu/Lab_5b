@@ -13,7 +13,7 @@
         }
 
         .container {
-            margin-top: 100px;
+            margin-top: 50px;
             background-color: #FFE2E2;
             padding: 30px;
             border-radius: 8px;
@@ -28,13 +28,22 @@
         .btn-custom:hover {
             background-color: #6f8e6f;
         }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h2 class="text-center">Register</h2>
-        <form action="register.php" method="post">
+        <form action="insert.php" method="post">
             <div class="mb-3">
                 <label for="matric" class="form-label">Matric:</label>
                 <input type="text" id="matric" name="matric" class="form-control" required>
@@ -56,7 +65,7 @@
                 </select>
             </div>
             <div class="d-flex justify-content-between">
-                <button type="submit" name="submit" class="btn btn-custom">Register</button>
+                <button type="submit" class="btn btn-custom">Register</button>
                 <a href="login.php" class="btn btn-secondary">Back to Login</a>
             </div>
         </form>

@@ -13,8 +13,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db = $database->getConnection();
 
     $user = new User($db);
-    $user->updateUser($matric, $name, $role);
+    $result = $user->updateUser($matric, $name, $role);
 
     // Close the connection
     $db->close();
+
+    // Redirect or show a message based on the result
+    if ($result === true) {
+        echo "<script>
+                alert('User updated successfully.');
+                window.location.href = 'read.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Error updating user: " . addslashes($result) . "');
+                window.history.back();
+              </script>";
+    }
 }

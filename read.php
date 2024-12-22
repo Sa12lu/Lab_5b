@@ -45,6 +45,13 @@ try {
         .btn-custom:hover {
             background-color: #6f8e6f;
         }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
     </style>
 </head>
 
@@ -83,6 +90,10 @@ try {
                 <?php endif; ?>
             </tbody>
         </table>
+        <!-- Button to go back to the login page -->
+        <div class="text-center mt-4">
+            <a href="login.php" class="btn btn-secondary">Back to Login</a>
+        </div>
     </div>
 </body>
 
